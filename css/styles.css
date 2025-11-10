@@ -1,0 +1,220 @@
+/* =========================================================
+   PORTFOLIO STYLESHEET — Cristina España
+   Author: Cristina España
+   Description: Styles for personal web portfolio
+   ========================================================= */
+
+/* ---------- GLOBAL STYLES ---------- */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Container spacing for main sections */
+section {
+    padding: 40px;
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1,
+h2 {
+    color: #00264d;
+}
+
+/* Links default style */
+a {
+    color: #004080;
+}
+
+a:hover {
+    color: #0059b3;
+}
+
+/* ---------- HEADER ---------- */
+header {
+    background: #00264d;
+    /* Deep navy background */
+    color: white;
+    /* White text for contrast */
+    padding: 25px 20px;
+    text-align: center;
+    border-bottom: 4px solid #007bff;
+    /* Bright blue accent line */
+}
+
+/* Center and stack header content */
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Name styling */
+.name-title h1 {
+    font-size: 2.4rem;
+    margin: 0;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    /* Ensure the name is visible on dark blue */
+}
+
+/* Subtitle below the name */
+.subtitle {
+    font-size: 1rem;
+    color: #cce0ff;
+    /* Softer blue tone for better readability */
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-style: italic;
+    max-width: 90%;
+    line-height: 1.5;
+}
+
+/* ---------- NAVIGATION MENU ---------- */
+nav {
+    margin-top: 5px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #66b3ff;
+    /* Lighter blue hover effect */
+    text-decoration: underline;
+}
+
+/* ---------- BUTTONS ---------- */
+.btn {
+    display: inline-block;
+    background-color: #004080;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0059b3;
+}
+
+/* ---------- LISTS ---------- */
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    background: #00264d;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+    font-size: 0.9rem;
+}
+
+/* ---------- PROJECTS SECTION ---------- */
+.projects {
+    text-align: center;
+}
+
+.projects h2 {
+    color: #00264d;
+    margin-bottom: 10px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 30px auto;
+    max-width: 800px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* Project Image */
+.project-image {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-bottom: 3px solid #0059b3;
+}
+
+/* Project Info */
+.project-info {
+    padding: 20px;
+    text-align: left;
+}
+
+.project-info h3 {
+    color: #00264d;
+    margin-bottom: 10px;
+}
+
+.project-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #333;
+}
+
+/* Responsive layout for small screens */
+@media (max-width: 700px) {
+    .project-card {
+        max-width: 95%;
+    }
+
+    .project-info {
+        text-align: center;
+    }
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+/* Adjust layout for smaller screens */
+@media (max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    .name-title h1 {
+        font-size: 1.5rem;
+    }
+
+    section {
+        padding: 20px;
+        margin: 20px;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
