@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>One Piece Game — Cristina Espana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="name-title">
+                <h1>Cristina Espana</h1>
+                <p class="subtitle">Data Analyst</p>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-detail">
+        <a href="projects.html"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+
+        <div class="detail-header">
+            <img src="images/onepiece.png" alt="One Piece Game Screenshot" class="project-image">
+            <div class="detail-title">
+                <h2>One Piece Game</h2>
+                <p class="detail-subtitle"><strong>Stack:</strong> C#, UWP, Game Logic, File Handling</p>
+                <div class="detail-actions">
+                    <a href="https://github.com/CristinaEspana/One_Piece_Game" class="btn" >
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> Repository
+                    </a>
+                    <a href="docs/OnePiece_CaseStudy.pdf" class="btn" target="_fa-file-pdf" aria-hidden="true"></i> Case
+                        Study (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-grid">
+            <article>
+                <h3>Overview</h3>
+                <p>
+                    A mini adventure game where the player controls Luffy, collects characters (e.g., Zoro, Nami), and
+                    avoids obstacles.
+                    Features three difficulty levels, a scoring system, and persistent highscores.
+                </p>
+            </article>
+
+            <article>
+                <h3>Game Features</h3>
+                <ul>
+                    <li>Character movement via keyboard or gamepad.</li>
+                    <li>Collision detection and collectible items.</li>
+                    <li>Dynamic difficulty (speed and obstacle density).</li>
+                    <li>Highscores persisted to local files (JSON or plain text).</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Technical Details</h3>
+                <ul>
+                    <li>Canvas rendering with tick-based updates.</li>
+                    <li>Game state machine (Start, Playing, Paused, GameOver).</li>
+                    <li>File handling for score persistence.</li>
+                </ul>
+                <pre class="code-snippet"><code>// Simplified game loop
+void UpdateGame(TimeSpan delta) {
+  player.Move(input, delta);
+  foreach (var obj in collectibles) {
+    if (player.Collides(obj)) score += obj.Value;
+  }
+}
+</code></pre>
+            </article>
+
+            <article>
+                <h3>Screenshots</h3>
+                <div class="screenshot-row">
+                    <img src="images/onepiece.png" alt="One Piece Game Screenshot" class="project-image">
+                </div>
+            </article>
+
+            <article>
+                <h3>Challenges & Learnings</h3>
+                <ul>
+                    <li>Balancing difficulty and game speed.</li>
+                    <li>Optimizing collision checks for performance.</li>
+                    <li>Implementing clean state management patterns.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Cristina Espana | Portfolio</p>
+    </footer>
+</body>
+
+</html>

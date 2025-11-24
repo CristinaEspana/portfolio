@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contoso Power BI Dashboard — Cristina Espana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <div class="name-title">
+                <h1>Cristina Espana</h1>
+                <p class="subtitle">Data Analyst</p>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-detail">
+        <a href="projects.html"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+
+        <div class="detail-header">
+            <img src="images/contoso.png" alt="Contoso Power BI Screenshot" class="project-image">
+            <div class="detail-title">
+                <h2>Contoso Power BI Dashboard</h2>
+                <p class="detail-subtitle"><strong>Stack:</strong> Power BI, DAX, Data Modeling, Data Visualization</p>
+                <div class="detail-actions">
+                    
+                    <!--<i class="fa-solid fa-chart-line" aria-hidden="true"></i> Live Report-->
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-grid">
+            <article>
+                <h3>Overview</h3>
+                <p>
+                    A complete Power BI solution analyzing Contoso retail performance: KPIs, profitability,
+                    top-performing products, and multi-year trends. Built with an optimized star schema and interactive
+                    visuals.
+                </p>
+            </article>
+
+            <article>
+                <h3>Data Model</h3>
+                <ul>
+                    <li>Star schema with fact and dimension tables.</li>
+                    <li>Active relationships and time intelligence functions.</li>
+                    <li>DAX measures for KPIs and ratios (e.g., Margin %, YoY Sales).</li>
+                </ul>
+                <pre class="code-snippet"><code>-- Example DAX
+Total Sales = SUM(FactSales[SalesAmount])
+YoY Sales = CALCULATE([Total Sales], SAMEPERIODLASTYEAR('Date'[Date]))
+Margin % = DIVIDE([Total Margin], [Total Sales])
+</code></pre>
+            </article>
+
+            <article>
+                <h3>Visuals & Interactions</h3>
+                <ul>
+                    <li>KPI cards, line charts, bar charts, and geographic maps.</li>
+                    <li>Bookmarks for switching views (Performance / Profitability).</li>
+                    <li>Drill-through to product and store details.</li>
+                </ul>
+            </article>
+
+            <!-- Replace src with your Publish-to-Web iframe URL if you want to embed -->
+            <!--
+            <article>
+                <h3>Embed (optional)</h3>
+                <div class="embed-wrapper">
+                    
+                    <iframe title="Contoso Report" </iframe>
+                </div>
+                <p class="embed-note">
+                    Note: Use Publish to Web only for non-sensitive, safe datasets.
+                </p>
+            </article>
+            -->
+
+            <article>
+                <h3>Insights & Impact</h3>
+                <ul>
+                    <li>Identified top-margin products and seasonal patterns.</li>
+                    <li>Prioritized stores by performance and profitability.</li>
+                    <li>Supported pricing and promotional decisions.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Screenshots</h3>
+                <div class="screenshot-row">
+                    <img src="images/contoso.png" alt="Contoso Power BI Screenshot" class="project-image">
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Cristina Espana | Portfolio</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tidy Task App — Cristina Espana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+        <div class="header-content">
+            <div class="name-title">
+                <h1>Cristina Espana</h1>
+                <p class="subtitle">Data Analyst</p>
+            </div>
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="resume.html">Resume</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="project-detail">
+        <a href="projects.html"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+
+        <div class="detail-header">
+            <img src="images/tidytask.png" alt="Tydi Task App Screenshot" class="project-image">
+            <div class="detail-title">
+                <h2>Tidy Task App</h2>
+                <p class="detail-subtitle"><strong>Stack:</strong> C#, .NET, UWP, UI Design</p>
+                <div class="detail-actions">
+                    <a href="https://github.com/CristinaEspana/TidyTask" class="btn" >
+                    <i class="fa-brands fa-github" aria-hidden="true"></i> Repository
+                    </a>
+                    <a href="docs/TidyTask_CaseStudy.pdf" class="btn" target="_fa-file-pdf" aria-hidden="true"></i> Case
+                        Study (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="detail-grid">
+            <article>
+                <h3>Overview</h3>
+                <p>
+                    Tidy Task is a task management application designed for simplicity and productivity.
+                    Users can create, edit, mark as completed, and delete tasks through an intuitive UI.
+                </p>
+            </article>
+
+            <article>
+                <h3>Key Features</h3>
+                <ul>
+                    <li>Create, update, and delete tasks with input validation.</li>
+                    <li>Local data persistence using UWP storage APIs.</li>
+                    <li>Filter tasks by status and search by keywords.</li>
+                    <li>Accessible design with proper contrast and keyboard navigation.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Tech Stack & Tools</h3>
+                <ul>
+                    <li>C# and .NET for core logic.</li>
+                    <li>UWP + XAML for UI and data binding.</li>
+                    <li>MVVM architecture for maintainability.</li>
+                </ul>
+            </article>
+
+            <article>
+                <h3>Architecture</h3>
+                <p>
+                    Layered architecture: UI (XAML), ViewModels, and Data Services.
+                    Tasks are serialized to JSON and stored in local app data for persistence.
+                </p>
+                <pre class="code-snippet"><code>// Example class
+public class TaskItem {
+  public string Id { get; set; }
+  public string Title { get; set; }
+  public string Notes { get; set; }
+  public bool IsDone { get; set; }
+}
+</code></pre>
+            </article>
+
+            <article>
+                <h3>Screenshots</h3>
+                <div class="screenshot-row">
+                    <img src="images/tidytask.png" alt="Tydi Task App Screenshot" class="project-image">
+                </div>
+            </article>
+
+            <article>
+                <h3>Challenges & Learnings</h3>
+                <ul>
+                    <li>List virtualization for performance with large datasets.</li>
+                    <li>Improved UX via visual states and subtle animations.</li>
+                    <li>Accessibility-first mindset for inclusive design.</li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Cristina Espana | Portfolio</p>
+    </footer>
+    </body>
+
+</html>
