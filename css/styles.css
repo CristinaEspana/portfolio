@@ -8,213 +8,441 @@
 body {
     font-family: "Segoe UI", Arial, sans-serif;
     margin: 0;
-    background: #f8f9fa;
+    background: #f4f6f9;
     color: #333;
-    line-height: 1.6;
+    line-height: 1.4;
 }
 
-/* Container spacing for main sections */
 section {
-    padding: 40px;
-    max-width: 900px;
-    margin: 40px auto;
-    background: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
-/* Headings */
-h1,
+h1 {
+    color: #ffffff;
+}
+
 h2 {
-    color: #00264d;
+    color: #002855;
 }
 
-/* Links default style */
 a {
-    color: #004080;
+    color: #0056b3;
+    text-decoration: none;
+    transition: 0.3s ease;
 }
 
 a:hover {
-    color: #0059b3;
+    color: #003d80;
 }
 
 /* ---------- HEADER ---------- */
 header {
-    background: #00264d;
-    /* Deep navy background */
+    background: linear-gradient(135deg, #002855, #004a99);
     color: white;
-    /* White text for contrast */
-    padding: 25px 20px;
+    padding: 25px 10px;
     text-align: center;
-    border-bottom: 4px solid #007bff;
-    /* Bright blue accent line */
+    border-bottom: 5px solid #6cb6ff;
 }
 
-/* Center and stack header content */
 .header-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 8px;
 }
 
-/* Name styling */
 .name-title h1 {
-    font-size: 2.4rem;
+    font-size: 2.8rem;
     margin: 0;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
-    color: #ffffff;
-    /* Ensure the name is visible on dark blue */
 }
 
-/* Subtitle below the name */
 .subtitle {
-    font-size: 1rem;
-    color: #cce0ff;
-    /* Softer blue tone for better readability */
-    margin-top: 10px;
-    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #dceaff;
+    line-height: 1.4;
+    margin: 10px 0;
     font-style: italic;
-    max-width: 90%;
-    line-height: 1.5;
 }
 
-/* ---------- NAVIGATION MENU ---------- */
+/* ---------- NAVIGATION ---------- */
 nav {
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 nav a {
     color: white;
-    text-decoration: none;
-    margin: 0 20px;
-    font-weight: bold;
+    margin: 0 18px;
+    font-weight: 600;
     font-size: 1rem;
-    transition: color 0.3s ease;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
+    transition: 0.3s ease;
 }
 
 nav a:hover,
 nav a.active {
-    color: #66b3ff;
-    /* Lighter blue hover effect */
-    text-decoration: underline;
+    color: #aeddff;
+    border-bottom: 2px solid #aeddff;
 }
 
 /* ---------- BUTTONS ---------- */
 .btn {
     display: inline-block;
-    background-color: #004080;
+    background-color: #0056b3;
     color: white;
-    padding: 10px 15px;
-    border-radius: 5px;
+    padding: 12px 18px;
+    border-radius: 6px;
     text-decoration: none;
+    font-weight: bold;
     margin-top: 10px;
-    transition: background-color 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .btn:hover {
-    background-color: #0059b3;
+    background-color: #003d80;
+    transform: translateY(-2px);
 }
 
-/* ---------- LISTS ---------- */
-ul {
-    list-style-type: disc;
-    margin-left: 20px;
-}
-
-/* ---------- FOOTER ---------- */
-footer {
-    text-align: center;
-    background: #00264d;
-    color: white;
-    padding: 15px;
-    margin-top: 40px;
-    font-size: 0.9rem;
-}
-
-/* ---------- PROJECTS SECTION ---------- */
+/* ---------- PROJECT CARDS ---------- */
 .projects {
     text-align: center;
 }
 
 .projects h2 {
-    color: #00264d;
+    font-size: 2rem;
     margin-bottom: 10px;
 }
 
 .project-card {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
     background: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin: 30px auto;
-    max-width: 800px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 18px;
     overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 40px auto;
+    transition: 0.3s ease;
+    padding: 15px;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Project Image */
 .project-image {
-    width: 100%;
+    width: 180px;
     height: auto;
-    max-height: 350px;
+    border-radius: 10px;
     object-fit: cover;
-    border-bottom: 3px solid #0059b3;
+    border: 3px solid #0056b3;
 }
 
-/* Project Info */
 .project-info {
-    padding: 20px;
+    flex: 1;
     text-align: left;
+    padding: 15px;
 }
 
 .project-info h3 {
-    color: #00264d;
+    margin-bottom: 12px;
+    font-size: 1.5rem;
+    color: #002855;
+}
+
+.project-info .skills {
+    font-weight: bold;
+    color: #004a99;
     margin-bottom: 10px;
 }
 
 .project-info p {
     font-size: 1rem;
+    color: #444;
     line-height: 1.5;
+}
+
+
+/* ---------- PROJECT DETAIL CONTAINER ---------- */
+.project-detail {
+    padding: 30px;
+    max-width: 1000px;
+    margin: 20px auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 15px;
+    color: #004a99;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.back-link:hover {
+    color: #003d80;
+}
+
+/* ---------- HEADER OF DETAIL PAGE ---------- */
+.detail-header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 25px;
+    flex-wrap: wrap;
+}
+
+.detail-image {
+    width: 220px;
+    height: auto;
+    border-radius: 12px;
+    border: 3px solid #0056b3;
+    object-fit: cover;
+}
+
+.detail-title h2 {
+    margin: 0;
+    color: #002855;
+    font-size: 1.8rem;
+}
+
+.detail-subtitle {
+    color: #004a99;
+    margin: 8px 0 14px 0;
+    font-size: 1rem;
+}
+
+.detail-actions .btn {
+    margin-right: 8px;
+}
+
+/* ---------- GRID FOR CONTENT ---------- */
+.detail-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.detail-grid article {
+    background: #f9fbff;
+    border: 1px solid #e5eefb;
+    border-radius: 12px;
+    padding: 16px;
+    font-size: 0.95rem;
     color: #333;
 }
 
-/* Responsive layout for small screens */
+.detail-grid h3 {
+    color: #002855;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+/* ---------- CODE SNIPPETS ---------- */
+.code-snippet {
+    background: #0f1a2b;
+    color: #e6f1ff;
+    padding: 12px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.92rem;
+    margin-top: 10px;
+}
+
+/* ---------- SCREENSHOTS ---------- */
+.screenshot-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.screenshot-row img {
+    width: 240px;
+    border-radius: 8px;
+    border: 2px solid #d6e8ff;
+}
+
+/* ------ DOWNLOAD RESUME BUTTON ------ */
+.download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #007bff;
+    padding: 8px 10px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border-radius: 6px;
+    text-decoration: none;
+    color: white;
+}
+
+.download-btn i {
+    font-size: 1rem;
+}
+
+.download-btn:hover {
+    background-color: #aeddff;
+}
+
+/* Date of last update */
+.resume-updated {
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: -5px;
+}
+
+/* ---------- CONTACT PAGE ---------- */
+.contact {
+    text-align: left;
+}
+
+.contact-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.contact-list li {
+    margin-bottom: 10px;
+    font-size: 1rem;
+}
+
+.contact-list a {
+    color: #004080;
+    text-decoration: none;
+}
+
+.contact-list a:hover {
+    text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 500px;
+    margin-top: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    width: 100%;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.contact-form button {
+    width: 150px;
+    align-self: flex-start;
+}
+
+/* ---------- CONTACT ICONS ---------- */
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.contact-list li i {
+    font-size: 1.2rem;
+    color: #004080;
+    width: 20px;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+    text-align: center;
+    background: #002855;
+    color: white;
+    padding: 18px;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+
+/* ---------- EMBEDDED CONTENT ---------- */
+.embed-wrapper iframe {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    width: 100%;
+    height: 520px;
+}
+
+.embed-note {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 8px;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
 @media (max-width: 700px) {
+    section {
+        padding: 25px;
+    }
+
     .project-card {
-        max-width: 95%;
+        margin: 20px auto;
     }
 
     .project-info {
         text-align: center;
     }
-}
 
-/* ---------- RESPONSIVE DESIGN ---------- */
-/* Adjust layout for smaller screens */
-@media (max-width: 600px) {
     header {
-        padding: 15px;
+        padding: 30px 10px;
     }
 
     .name-title h1 {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
+    }
+}
+
+
+/* ---------- RESPONSIVE DESIGN FOR DETAIL PAGES ---------- */
+@media (max-width: 900px) {
+    .detail-header {
+        flex-direction: column;
+        text-align: center;
     }
 
-    section {
-        padding: 20px;
-        margin: 20px;
+    .detail-image {
+        width: 100%;
+        max-width: 500px;
     }
 
-    nav a {
-        display: block;
-        margin: 5px 0;
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .detail-actions {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
     }
 }
